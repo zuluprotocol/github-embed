@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Embed source from Github</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
+  <style>
+    html {
+      overflow-y: scroll;
+    }
+    @media (max-width: 767.98px) {
+      .form-control.is-valid,
+      .form-control.is-invalid {
+        background-image: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main role="main" class="container py-5">
+    <h1>Embed source from Github</h1>
+    <form id="goForm" class="mb-4">
+      <div class="input-group input-group-lg mb-3">
+        <input type="text" name="target" id="target" class="form-control" required>
+        <div class="invalid-feedback mt-2 order-1">Invalid URL.</div>
+        <select id="style" name="style" class="custom-select col-3 col-md-2">
+          <option value="a11y-dark">a11y-dark</option>
+          <option value="a11y-light">a11y-light</option>
+          <option value="agate">agate</option>
+          <option value="an-old-hope">an-old-hope</option>
+          <option value="androidstudio">androidstudio</option>
+          <option value="arduino-light">arduino-light</option>
+          <option value="arta">arta</option>
+          <option value="ascetic">ascetic</option>
+          <option value="atelier-cave-dark">atelier-cave-dark</option>
+          <option value="atelier-cave-light">atelier-cave-light</option>
+          <option value="atelier-dune-dark">atelier-dune-dark</option>
+          <option value="atelier-dune-light">atelier-dune-light</option>
+          <option value="atelier-estuary-dark">atelier-estuary-dark</option>
+          <option value="atelier-estuary-light">atelier-estuary-light</option>
+          <option value="atelier-forest-dark">atelier-forest-dark</option>
+          <option value="atelier-forest-light">atelier-forest-light</option>
+          <option value="atelier-heath-dark">atelier-heath-dark</option>
+          <option value="atelier-heath-light">atelier-heath-light</option>
+          <option value="atelier-lakeside-dark">atelier-lakeside-dark</option>
+          <option value="atelier-lakeside-light">atelier-lakeside-light</option>
+          <option value="atelier-plateau-dark">atelier-plateau-dark</option>
+          <option value="atelier-plateau-light">atelier-plateau-light</option>
+          <option value="atelier-savanna-dark">atelier-savanna-dark</option>
+          <option value="atelier-savanna-light">atelier-savanna-light</option>
+          <option value="atelier-seaside-dark">atelier-seaside-dark</option>
+          <option value="atelier-seaside-light">atelier-seaside-light</option>
+          <option value="atelier-sulphurpool-dark">atelier-sulphurpool-dark</option>
+          <option value="atelier-sulphurpool-light">atelier-sulphurpool-light</option>
+          <option value="atom-one-dark">atom-one-dark</option>
+          <option value="atom-one-dark-reasonable">atom-one-dark-reasonable</option>
+          <option value="atom-one-light">atom-one-light</option>
+          <option value="codepen-embed">codepen-embed</option>
+          <option value="color-brewer">color-brewer</option>
+          <option value="darcula">darcula</option>
+          <option value="dark">dark</option>
+          <option value="default">default</option>
+          <option value="docco">docco</option>
+          <option value="dracula">dracula</option>
+          <option value="far">far</option>
+          <option value="foundation">foundation</option>
+          <option value="github">github</option>
+          <option value="github-gist">github-gist</option>
+          <option value="gml">gml</option>
+          <option value="googlecode">googlecode</option>
+          <option value="gradient-dark" selected>gradient-dark</option>
+          <option value="grayscale">grayscale</option>
+          <option value="gruvbox-dark">gruvbox-dark</option>
+          <option value="gruvbox-light">gruvbox-light</option>
+          <option value="hopscotch">hopscotch</option>
+          <option value="hybrid">hybrid</option>
+          <option value="idea">idea</option>
+          <option value="ir-black">ir-black</option>
+          <option value="isbl-editor-dark">isbl-editor-dark</option>
+          <option value="isbl-editor-light">isbl-editor-light</option>
+          <option value="kimbie.dark">kimbie.dark</option>
+          <option value="kimbie.light">kimbie.light</option>
+          <option value="lightfair">lightfair</option>
+          <option value="magula">magula</option>
+          <option value="mono-blue">mono-blue</option>
+          <option value="monokai">monokai</option>
+          <option value="monokai-sublime">monokai-sublime</option>
+          <option value="night-owl">night-owl</option>
+          <option value="nord">nord</option>
+          <option value="obsidian">obsidian</option>
+          <option value="ocean">ocean</option>
+          <option value="paraiso-dark">paraiso-dark</option>
+          <option value="paraiso-light">paraiso-light</option>
+          <option value="purebasic">purebasic</option>
+          <option value="qtcreator_dark">qtcreator_dark</option>
+          <option value="qtcreator_light">qtcreator_light</option>
+          <option value="railscasts">railscasts</option>
+          <option value="rainbow">rainbow</option>
+          <option value="routeros">routeros</option>
+          <option value="shades-of-purple">shades-of-purple</option>
+          <option value="solarized-dark">solarized-dark</option>
+          <option value="solarized-light">solarized-light</option>
+          <option value="sunburst">sunburst</option>
+          <option value="tomorrow">tomorrow</option>
+          <option value="tomorrow-night">tomorrow-night</option>
+          <option value="tomorrow-night-blue">tomorrow-night-blue</option>
+          <option value="tomorrow-night-bright">tomorrow-night-bright</option>
+          <option value="tomorrow-night-eighties">tomorrow-night-eighties</option>
+          <option value="vs">vs</option>
+          <option value="vs2015">vs2015</option>
+          <option value="xcode">xcode</option>
+          <option value="xt256">xt256</option>
+          <option value="zenburn">zenburn</option>
+        </select>
+        <div class="input-group-append">
+          <button class="btn btn-lg btn-primary" type="submit">Go</button>
+        </div>
+      </div>
+      <div class="custom-control custom-checkbox custom-control-inline">
+        <input type="checkbox" class="custom-control-input" name="showBorder" id="showBorder">
+        <label class="custom-control-label" for="showBorder">Show Border</label>
+      </div>
+      <div class="custom-control custom-checkbox custom-control-inline">
+        <input type="checkbox" class="custom-control-input" name="showLineNumbers" id="showLineNumbers">
+        <label class="custom-control-label" for="showLineNumbers">Show Line numbers</label>
+      </div>
+      <div class="custom-control custom-checkbox custom-control-inline">
+        <input type="checkbox" class="custom-control-input" name="hideFileMeta" id="hideFileMeta" checked>
+        <label class="custom-control-label" for="hideFileMeta">Hide file metadata</label>
+      </div>
+    </form>
+    <label for="embededCode">Code to embed</label>
+    <div class="input-group input-group-lg mb-3">
+      <input type="text" id="embededCode" class="form-control" onclick="this.select();">
+      <div class="input-group-append">
+        <a tabindex="0" class="btn btn-lg btn-outline-secondary" id="copyButton" role="button" data-toggle="popover"
+          data-trigger="focus" data-placement="bottom" data-content="Copied!">Copy</a>
+      </div>
+    </div>
+    <label for="previewArea">Preview</label>
+    <div id="previewArea" class="py-1">
+      <div class="text-center m-3">
+        <svg width="64" height="64" viewBox="0 0 522.468 522.469">
+          <path
+            d="M325.762,70.513l-17.706-4.854c-2.279-0.76-4.524-0.521-6.707,0.715c-2.19,1.237-3.669,3.094-4.429,5.568L190.426,440.53    c-0.76,2.475-0.522,4.809,0.715,6.995c1.237,2.19,3.09,3.665,5.568,4.425l17.701,4.856c2.284,0.766,4.521,0.526,6.71-0.712    c2.19-1.243,3.666-3.094,4.425-5.564L332.042,81.936c0.759-2.474,0.523-4.808-0.716-6.999    C330.088,72.747,328.237,71.272,325.762,70.513z"
+            fill="#888888" />
+          <path
+            d="M166.167,142.465c0-2.474-0.953-4.665-2.856-6.567l-14.277-14.276c-1.903-1.903-4.093-2.857-6.567-2.857    s-4.665,0.955-6.567,2.857L2.856,254.666C0.95,256.569,0,258.759,0,261.233c0,2.474,0.953,4.664,2.856,6.566l133.043,133.044    c1.902,1.906,4.089,2.854,6.567,2.854s4.665-0.951,6.567-2.854l14.277-14.268c1.903-1.902,2.856-4.093,2.856-6.57    c0-2.471-0.953-4.661-2.856-6.563L51.107,261.233l112.204-112.201C165.217,147.13,166.167,144.939,166.167,142.465z"
+            fill="#888888" />
+          <path
+            d="M519.614,254.663L386.567,121.619c-1.902-1.902-4.093-2.857-6.563-2.857c-2.478,0-4.661,0.955-6.57,2.857l-14.271,14.275    c-1.902,1.903-2.851,4.09-2.851,6.567s0.948,4.665,2.851,6.567l112.206,112.204L359.163,373.442    c-1.902,1.902-2.851,4.093-2.851,6.563c0,2.478,0.948,4.668,2.851,6.57l14.271,14.268c1.909,1.906,4.093,2.854,6.57,2.854    c2.471,0,4.661-0.951,6.563-2.854L519.614,267.8c1.903-1.902,2.854-4.096,2.854-6.57    C522.468,258.755,521.517,256.565,519.614,254.663z"
+            fill="#888888" />
+        </svg>
+      </div>
+    </div>
+    <label for="tipsArea">Tips</label>
+    <div style="font-size: 0.8em; padding-top: 0.2em;">
+      <p>Append <span style="color: blue; font-family: monospace; font-size: 1.2em;">#Lxx-Lyy</span> to GitHub URL to specify line numbers or include an identifier in your code the following format: 
+      <pre style="color: blue; font-family: monospace; font-size: 1.2em;">:your_custom_identifier__ 
+your code here 
+__your_custom_identifier:
+</pre> and then append <span style="color: blue; font-family: monospace; font-size: 1.2em;">#your_custom_identifier</span> to GitHub URL to include a section of code without having to keep track of line numbers.</p></div>
+  </main>
+  <style>
+    .github-corner:hover .octo-arm {
+      animation: octocat-wave 560ms ease-in-out
+    }
+
+    @keyframes octocat-wave {
+
+      0%,
+      100% {
+        transform: rotate(0)
+      }
+
+      20%,
+      60% {
+        transform: rotate(-25deg)
+      }
+
+      40%,
+      80% {
+        transform: rotate(10deg)
+      }
+    }
+
+    @media (max-width:500px) {
+      .github-corner:hover .octo-arm {
+        animation: none
+      }
+
+      .github-corner .octo-arm {
+        animation: octocat-wave 560ms ease-in-out
+      }
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/postscribe@2.0.8/dist/postscribe.min.js"></script>
+  <!-- In fact, the following is optional, here we make it to be loaded in advance -->
+  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/highlightjs-line-numbers.js@2.8.0/dist/highlightjs-line-numbers.min.js"></script>
+  <script>
+    $(function () {
+      // Initialize popovers
+      $('[data-toggle="popover"]').popover();
+
+      // Load options from localStorage if possible
+      ['showBorder', 'showLineNumbers', 'hideFileMeta'].forEach(e => {
+        const isShown = localStorage.getItem(e);
+        if (isShown !== null) {
+          document.getElementById(e).checked = (isShown === 'true');
+        }
+      });
+      const style = localStorage.getItem('style');
+      if (style !== null) {
+        document.getElementById('style').value = style;
+      }
+
+      $("#goForm").on("submit", function (e) {
+        e.preventDefault();
+
+        // Save current options using localStorage
+        ['showBorder', 'showLineNumbers', 'hideFileMeta'].forEach(e => {
+          const newValue = document.getElementById(e).checked ? 'true' : 'false';
+          localStorage.setItem(e, newValue);
+        });
+        localStorage.setItem('style', document.getElementById('style').value);
+
+        const target = $("#target").val();
+        const pattern = /^(https|http):\/\/github\.com(\/[A-Za-z0-9_\-\.]+){2}\/(tree|blob)\/[A-Za-z0-9_\-\.]+\//;
+        if (pattern.test(target)) {
+          $("#target").removeClass("is-invalid");
+          $("#target").addClass("is-valid");
+          const jsURL = `embed.js?${$(this).serialize()}`;
+          const scriptTag = `<script src=\"${jsURL}\"><\/script>`;
+          $("#embededCode").val(scriptTag);
+          document.getElementById("previewArea").innerHTML = `<style>.lds-ring{margin:1rem auto;position:relative;width:60px;height:60px}.lds-ring div{box-sizing:border-box;display:block;position:absolute;width:48px;height:48px;margin:6px;border:6px solid #fff;border-radius:50%;animation:lds-ring 1.2s cubic-bezier(0.5,0,0.5,1) infinite;border-color:#888 transparent transparent transparent}.lds-ring div:nth-child(1){animation-delay:-.45s}.lds-ring div:nth-child(2){animation-delay:-.3s}.lds-ring div:nth-child(3){animation-delay:-.15s}@keyframes lds-ring{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}</style>
+      <div><div class="lds-ring"><div></div><div></div><div></div><div></div></div></div>`;
+          postscribe("#previewArea", scriptTag, {
+            beforeWrite: (str) => {
+              document.getElementById("previewArea").innerHTML = "";
+              return str;
+            }
+          });
+        } else {
+          $("#target").removeClass("is-valid");
+          $("#target").addClass("is-invalid");
+        }
+      });
+      $("#copyButton").on("click", (e) => {
+        e.preventDefault();
+        copyTextToClipboard($("#embededCode").val());
+      });
+    });
+
+    // https://stackoverflow.com/questions/400212/how-do-i-copy-to-the-clipboard-in-javascript
+    function copyTextToClipboard(text) {
+      if (!navigator.clipboard) {
+        fallbackCopyTextToClipboard(text);
+        return;
+      }
+      navigator.clipboard.writeText(text).then(() => {
+        console.log('Async: Copying to clipboard was successful!');
+      }, (err) => {
+        console.error('Async: Could not copy text: ', err);
+      });
+    }
+
+    function fallbackCopyTextToClipboard(text) {
+      const textArea = document.createElement("textarea");
+      textArea.value = text;
+      textArea.style.position = "fixed";
+      document.body.appendChild(textArea);
+      textArea.focus();
+      textArea.select();
+
+      try {
+        const successful = document.execCommand('copy');
+        const msg = successful ? 'successful' : 'unsuccessful';
+        console.log('Fallback: Copying text command was ' + msg);
+      } catch (err) {
+        console.error('Fallback: Oops, unable to copy', err);
+      }
+      document.body.removeChild(textArea);
+    }
+  </script>
+</body>
+
+</html>
