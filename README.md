@@ -29,4 +29,4 @@ Alternatively, host embed.js and use it as follows:
 
 ## Background
 
-This script was adapted from the work by (yusanshi)[https://github.com/yusanshi/embed-like-gist] and altered to match the requirements for embedding code in Vega documentation. It is shared open-source under the MIT license.
+This script was adapted from the work by [yusanshi](https://github.com/yusanshi/embed-like-gist) and altered to match the requirements for embedding code in Vega documentation. It is shared open-source under the MIT license.
